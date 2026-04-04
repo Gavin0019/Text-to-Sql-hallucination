@@ -1,0 +1,44 @@
+[
+  {
+    "file": "bird_dev_greedy.json",
+    "num_examples": 1534,
+    "summary_metrics": {
+      "table_precision": 0.9625054324206862,
+      "table_recall": 0.9483376792698827,
+      "table_f1": 0.9486015397032338,
+      "table_hallucination_rate": 0.03749456757931337,
+      "table_missing_rate": 0.05166232073011733,
+      "column_precision": 0.907816028914806,
+      "column_recall": 0.8747713209577616,
+      "column_f1": 0.8797063981841134,
+      "column_hallucination_rate": 0.08957640915559807,
+      "column_missing_rate": 0.12327300759504142,
+      "schema_precision": 0.9253867111817298,
+      "schema_recall": 0.8980906569889623,
+      "schema_f1": 0.9030530775689105,
+      "schema_hallucination_rate": 0.07461328881827008,
+      "schema_missing_rate": 0.10190934301103792,
+      "kg_table_path_precision": 0.9506006705159245,
+      "kg_table_path_recall": 0.9313590364437824,
+      "kg_table_path_f1": 0.9269442657154524,
+      "kg_table_path_hallucination_rate": 0.04939932948407525,
+      "kg_table_path_missing_rate": 0.0686409635562178,
+      "kg_column_path_precision": 0.8735324628080443,
+      "kg_column_path_recall": 0.8240682828688035,
+      "kg_column_path_f1": 0.8240330120078205,
+      "kg_column_path_hallucination_rate": 0.12385997526235965,
+      "kg_column_path_missing_rate": 0.1739760456839989,
+      "kg_path_precision": 0.889718801289965,
+      "kg_path_recall": 0.8460663417590767,
+      "kg_path_f1": 0.8476859620788172,
+      "kg_path_hallucination_rate": 0.11028119871003474,
+      "kg_path_missing_rate": 0.15393365824092312
+    },
+    "parser_usage": {
+      "sqlglot_used": 3014,
+      "fallback_parse_error": 54,
+      "fallback_sqlglot_unavailable": 0,
+      "db_id_infer_failed": 0
+    }
+  }
+]
