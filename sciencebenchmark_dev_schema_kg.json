@@ -1,0 +1,5524 @@
+{
+  "meta": {
+    "database_root": "C:\\work_study\\github\\UofT\\CSC2125\\Text-to-Sql-hallucination\\SchemaGraph\\OmniSQL-datasets\\data\\data\\sciencebenchmark\\databases",
+    "num_sqlite_files": 3,
+    "filtered_by_db_ids": [
+      "cordis_temporary",
+      "oncomx_v1_0_25_small",
+      "skyserver_dr16_2020_11_30"
+    ],
+    "num_nodes": 316,
+    "num_edges": 480
+  },
+  "nodes": [
+    {
+      "id": "db:cordis_temporary",
+      "type": "database",
+      "db_id": "cordis_temporary",
+      "path": "C:\\work_study\\github\\UofT\\CSC2125\\Text-to-Sql-hallucination\\SchemaGraph\\OmniSQL-datasets\\data\\data\\sciencebenchmark\\databases\\cordis_temporary\\cordis_temporary.sqlite"
+    },
+    {
+      "id": "table:cordis_temporary.activity_types",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "activity_types"
+    },
+    {
+      "id": "column:cordis_temporary.activity_types.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "activity_types",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.activity_types.description",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "activity_types",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.countries",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "countries"
+    },
+    {
+      "id": "column:cordis_temporary.countries.unics_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "countries",
+      "column": "unics_id",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.countries.country_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "countries",
+      "column": "country_name",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.countries.country_code2",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "countries",
+      "column": "country_code2",
+      "data_type": "character varying(2)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.countries.country_code3",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "countries",
+      "column": "country_code3",
+      "data_type": "character varying(3)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.countries.geocode_country_code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "countries",
+      "column": "geocode_country_code",
+      "data_type": "character varying(2)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.ec_framework_programs",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "ec_framework_programs"
+    },
+    {
+      "id": "column:cordis_temporary.ec_framework_programs.ec_framework_program_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "ec_framework_programs",
+      "column": "ec_framework_program_name",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:cordis_temporary.projects",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "projects"
+    },
+    {
+      "id": "column:cordis_temporary.projects.unics_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "unics_id",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.projects.acronym",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "acronym",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.title",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "title",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.ec_call",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "ec_call",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.ec_fund_scheme",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "ec_fund_scheme",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.cordis_ref",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "cordis_ref",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.ec_ref",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "ec_ref",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.start_date",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "start_date",
+      "data_type": "date",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.end_date",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "end_date",
+      "data_type": "date",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.start_year",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "start_year",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.end_year",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "end_year",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.homepage",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "homepage",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.total_cost",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "total_cost",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.ec_max_contribution",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "ec_max_contribution",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.framework_program",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "framework_program",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.objective",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "objective",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.projects.principal_investigator",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "projects",
+      "column": "principal_investigator",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.erc_panels",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "erc_panels"
+    },
+    {
+      "id": "column:cordis_temporary.erc_panels.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "erc_panels",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.erc_panels.description",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "erc_panels",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.erc_panels.part_of",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "erc_panels",
+      "column": "part_of",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.erc_research_domains",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "erc_research_domains"
+    },
+    {
+      "id": "column:cordis_temporary.erc_research_domains.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "erc_research_domains",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.erc_research_domains.description",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "erc_research_domains",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.eu_territorial_units",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "eu_territorial_units"
+    },
+    {
+      "id": "column:cordis_temporary.eu_territorial_units.geocode_regions",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "eu_territorial_units",
+      "column": "geocode_regions",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.eu_territorial_units.description",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "eu_territorial_units",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.eu_territorial_units.geocode_level",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "eu_territorial_units",
+      "column": "geocode_level",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.eu_territorial_units.nuts_version",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "eu_territorial_units",
+      "column": "nuts_version",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.funding_schemes",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "funding_schemes"
+    },
+    {
+      "id": "column:cordis_temporary.funding_schemes.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "funding_schemes",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.funding_schemes.title",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "funding_schemes",
+      "column": "title",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.institutions",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "institutions"
+    },
+    {
+      "id": "column:cordis_temporary.institutions.unics_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "unics_id",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.institutions.country_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "country_id",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.institutions_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "institutions_name",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.geocode_regions_3",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "geocode_regions_3",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.db_pedia_url",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "db_pedia_url",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.wikidata_url",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "wikidata_url",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.grid_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "grid_id",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.acronym",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "acronym",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.short_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "short_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.website",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "website",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.institutions.document_vectors",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "institutions",
+      "column": "document_vectors",
+      "data_type": "tsvector",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.people",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "people"
+    },
+    {
+      "id": "column:cordis_temporary.people.unics_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "people",
+      "column": "unics_id",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.people.full_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "people",
+      "column": "full_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.programmes",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "programmes"
+    },
+    {
+      "id": "column:cordis_temporary.programmes.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "programmes",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.programmes.rcn",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "programmes",
+      "column": "rcn",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.programmes.title",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "programmes",
+      "column": "title",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.programmes.short_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "programmes",
+      "column": "short_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.programmes.parent",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "programmes",
+      "column": "parent",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.project_erc_panels",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "project_erc_panels"
+    },
+    {
+      "id": "column:cordis_temporary.project_erc_panels.project",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_erc_panels",
+      "column": "project",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.project_erc_panels.panel",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_erc_panels",
+      "column": "panel",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.project_member_roles",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "project_member_roles"
+    },
+    {
+      "id": "column:cordis_temporary.project_member_roles.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_member_roles",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.project_member_roles.description",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_member_roles",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.project_members",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "project_members"
+    },
+    {
+      "id": "column:cordis_temporary.project_members.unics_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "unics_id",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.project_members.project",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "project",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.pic_number",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "pic_number",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.rcn",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "rcn",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.member_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "member_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.activity_type",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "activity_type",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.country",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "country",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.street",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "street",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.city",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "city",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.postal_code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "postal_code",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.ec_contribution",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "ec_contribution",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.institution_id",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "institution_id",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.member_role",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "member_role",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.geocode_regions_3",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "geocode_regions_3",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.member_short_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "member_short_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.department_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "department_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.vat_number",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "vat_number",
+      "data_type": "character varying",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.latitude",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "latitude",
+      "data_type": "numeric",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.longitude",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "longitude",
+      "data_type": "numeric",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.region_code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "region_code",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.project_members.region_name",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_members",
+      "column": "region_name",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.project_programmes",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "project_programmes"
+    },
+    {
+      "id": "column:cordis_temporary.project_programmes.project",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_programmes",
+      "column": "project",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.project_programmes.programme",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_programmes",
+      "column": "programme",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:cordis_temporary.project_subject_areas",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "project_subject_areas"
+    },
+    {
+      "id": "column:cordis_temporary.project_subject_areas.project",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_subject_areas",
+      "column": "project",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.project_subject_areas.subject_area",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_subject_areas",
+      "column": "subject_area",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:cordis_temporary.project_topics",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "project_topics"
+    },
+    {
+      "id": "column:cordis_temporary.project_topics.project",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_topics",
+      "column": "project",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.project_topics.topic",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "project_topics",
+      "column": "topic",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:cordis_temporary.subject_areas",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "subject_areas"
+    },
+    {
+      "id": "column:cordis_temporary.subject_areas.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "subject_areas",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:cordis_temporary.subject_areas.title",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "subject_areas",
+      "column": "title",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.subject_areas.description",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "subject_areas",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:cordis_temporary.topics",
+      "type": "table",
+      "db_id": "cordis_temporary",
+      "table": "topics"
+    },
+    {
+      "id": "column:cordis_temporary.topics.code",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "topics",
+      "column": "code",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.topics.rcn",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "topics",
+      "column": "rcn",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:cordis_temporary.topics.title",
+      "type": "column",
+      "db_id": "cordis_temporary",
+      "table": "topics",
+      "column": "title",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "db:oncomx_v1_0_25_small",
+      "type": "database",
+      "db_id": "oncomx_v1_0_25_small",
+      "path": "C:\\work_study\\github\\UofT\\CSC2125\\Text-to-Sql-hallucination\\SchemaGraph\\OmniSQL-datasets\\data\\data\\sciencebenchmark\\databases\\oncomx_v1_0_25_small\\oncomx_v1_0_25_small.sqlite"
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.anatomical_entity",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "anatomical_entity"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.anatomical_entity.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "anatomical_entity",
+      "column": "id",
+      "data_type": "character varying(20)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.anatomical_entity.name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "anatomical_entity",
+      "column": "name",
+      "data_type": "character varying(255)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.anatomical_entity.description",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "anatomical_entity",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker",
+      "column": "id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker.gene_symbol",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker",
+      "column": "gene_symbol",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker.biomarker_description",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker",
+      "column": "biomarker_description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker.biomarker_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker",
+      "column": "biomarker_id",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker.test_is_a_panel",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker",
+      "column": "test_is_a_panel",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_alias",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_alias"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_alias.biomarker_internal_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_alias",
+      "column": "biomarker_internal_id",
+      "data_type": "character varying(10)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_alias.alias",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_alias",
+      "column": "alias",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_article",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_article"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_article.biomarker_internal_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_article",
+      "column": "biomarker_internal_id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_article.pmid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_article",
+      "column": "pmid",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_edrn.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn",
+      "column": "id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_edrn.qa_state",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn",
+      "column": "qa_state",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_edrn.biomarker_title",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn",
+      "column": "biomarker_title",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_edrn.biomarker_type",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn",
+      "column": "biomarker_type",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_edrn.uberon_anatomical_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn",
+      "column": "uberon_anatomical_id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_edrn.phase",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_edrn",
+      "column": "phase",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda",
+      "column": "id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda.test_trade_name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda",
+      "column": "test_trade_name",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda.test_submission",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda",
+      "column": "test_submission",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_fda_drug",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_drug"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_fda_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_drug",
+      "column": "biomarker_fda_id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_drug",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_drug",
+      "column": "biomarker_drug",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_ncit_term"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.biomarker_fda_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_ncit_term",
+      "column": "biomarker_fda_id",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.ncit_biomarker",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_ncit_term",
+      "column": "ncit_biomarker",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_trade_name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_trade_name",
+      "data_type": "character varying(500)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_manufacturer",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_manufacturer",
+      "data_type": "character varying(300)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_submission",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_submission",
+      "data_type": "character varying(100)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.biomarker_origin",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "biomarker_origin",
+      "data_type": "character varying(30)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.doid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "doid",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.histological_type",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "histological_type",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.specimen_type",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "specimen_type",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.platform_method",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "platform_method",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_number_genes",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_number_genes",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_adoption_evidence",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_adoption_evidence",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_approval_status",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_approval_status",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_study_design",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "test_study_design",
+      "data_type": "character varying(255)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test.clinical_significance",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test",
+      "column": "clinical_significance",
+      "data_type": "TEXT",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_trial"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trade_name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_trial",
+      "column": "test_trade_name",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_submission",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_trial",
+      "column": "test_submission",
+      "data_type": "character varying(100)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trial_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_trial",
+      "column": "test_trial_id",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_use"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_use",
+      "column": "id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.test_trade_name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_use",
+      "column": "test_trade_name",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.test_submission",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_use",
+      "column": "test_submission",
+      "data_type": "character varying(100)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.approved_indication",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_use",
+      "column": "approved_indication",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.actual_use",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "biomarker_fda_test_use",
+      "column": "actual_use",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "cancer_tissue"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.cancer_tissue.doid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "cancer_tissue",
+      "column": "doid",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.cancer_tissue.uberon_anatomical_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "cancer_tissue",
+      "column": "uberon_anatomical_id",
+      "data_type": "character varying(20)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.differential_expression",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.gene_symbol",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "gene_symbol",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.doid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "doid",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.log2fc",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "log2fc",
+      "data_type": "double precision",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.pvalue",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "pvalue",
+      "data_type": "double precision",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.adjpvalue",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "adjpvalue",
+      "data_type": "double precision",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.statistical_significance",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "statistical_significance",
+      "data_type": "character varying(3)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.expression_change_direction",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "expression_change_direction",
+      "data_type": "character varying(10)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.subjects_up",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "subjects_up",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.subjects_down",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "subjects_down",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.subjects_nochange",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "subjects_nochange",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.subjects_nocoverage",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "subjects_nocoverage",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.differential_expression.subjects_total",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "differential_expression",
+      "column": "subjects_total",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.disease",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease",
+      "column": "id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease.name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease",
+      "column": "name",
+      "data_type": "character varying(60)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.disease_mutation",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.chromosome_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "chromosome_id",
+      "data_type": "character varying(2)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.chromosome_pos",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "chromosome_pos",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.ref_nt",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "ref_nt",
+      "data_type": "character(1)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.alt_nt",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "alt_nt",
+      "data_type": "character(1)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.ensembl_transcript_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "ensembl_transcript_id",
+      "data_type": "character varying(15)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.cds_pos",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "cds_pos",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.peptide_pos",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "peptide_pos",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.aa_pos_uniprotkb",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "aa_pos_uniprotkb",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.ref_aa",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "ref_aa",
+      "data_type": "character(1)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.alt_aa",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "alt_aa",
+      "data_type": "character(1)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.mutation_freq",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "mutation_freq",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.data_source",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "data_source",
+      "data_type": "character varying(12)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation.doid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation",
+      "column": "doid",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.disease_mutation_article",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_article"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_article.pmid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_article",
+      "column": "pmid",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_article.disease_mutation_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_article",
+      "column": "disease_mutation_id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_impact_prediction"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_impact_prediction",
+      "column": "id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.disease_mutation_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_impact_prediction",
+      "column": "disease_mutation_id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.site_prediction",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_impact_prediction",
+      "column": "site_prediction",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.probability",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_impact_prediction",
+      "column": "probability",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.tool",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_impact_prediction",
+      "column": "tool",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_site_annotation"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_site_annotation",
+      "column": "id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.disease_mutation_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_site_annotation",
+      "column": "disease_mutation_id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.description",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_site_annotation",
+      "column": "description",
+      "data_type": "character varying(255)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.feature_key",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_site_annotation",
+      "column": "feature_key",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_tissue"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_tissue.uberon_anatomical_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_tissue",
+      "column": "uberon_anatomical_id",
+      "data_type": "character varying(20)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.disease_mutation_tissue.disease_mutation_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "disease_mutation_tissue",
+      "column": "disease_mutation_id",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.healthy_expression",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.ensembl_gene_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "ensembl_gene_id",
+      "data_type": "character varying(20)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.uberon_anatomical_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "uberon_anatomical_id",
+      "data_type": "character varying(20)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.uberon_developmental_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "uberon_developmental_id",
+      "data_type": "character varying(14)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.expression_level_gene_relative",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "expression_level_gene_relative",
+      "data_type": "character varying(6)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.expression_level_anatomical_relative",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "expression_level_anatomical_relative",
+      "data_type": "character varying(6)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.call_quality",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "call_quality",
+      "data_type": "character varying(6)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.expression_rank_score",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "expression_rank_score",
+      "data_type": "numeric(9,2)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.healthy_expression.expression_score",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "healthy_expression",
+      "column": "expression_score",
+      "data_type": "numeric(9,5)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.map_protein_disease_mutation",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_protein_disease_mutation"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.peptide_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_protein_disease_mutation",
+      "column": "peptide_id",
+      "data_type": "character varying(15)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.ensembl_transcript_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_protein_disease_mutation",
+      "column": "ensembl_transcript_id",
+      "data_type": "character varying(15)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.uniprotkb_ac",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_protein_disease_mutation",
+      "column": "uniprotkb_ac",
+      "data_type": "character varying(15)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.map_uniprot_canonical_id",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_uniprot_canonical_id"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.map_uniprot_canonical_id.uniprotkb_ac",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_uniprot_canonical_id",
+      "column": "uniprotkb_ac",
+      "data_type": "character varying(15)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.map_uniprot_canonical_id.uniprotkb_canonical_ac",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "map_uniprot_canonical_id",
+      "column": "uniprotkb_canonical_ac",
+      "data_type": "character varying(15)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.species",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "species"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.species.speciesid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "species",
+      "column": "speciesid",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.species.genus",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "species",
+      "column": "genus",
+      "data_type": "character varying(70)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.species.species",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "species",
+      "column": "species",
+      "data_type": "character varying(70)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.species.speciescommonname",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "species",
+      "column": "speciescommonname",
+      "data_type": "character varying(70)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.stage",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "stage"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.stage.id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "stage",
+      "column": "id",
+      "data_type": "character varying(14)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.stage.name",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "stage",
+      "column": "name",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:oncomx_v1_0_25_small.xref_gene_ensembl",
+      "type": "table",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "xref_gene_ensembl"
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.xref_gene_ensembl.gene_symbol",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "xref_gene_ensembl",
+      "column": "gene_symbol",
+      "data_type": "character varying(255)",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.xref_gene_ensembl.ensembl_gene_id",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "xref_gene_ensembl",
+      "column": "ensembl_gene_id",
+      "data_type": "character varying(20)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:oncomx_v1_0_25_small.xref_gene_ensembl.speciesid",
+      "type": "column",
+      "db_id": "oncomx_v1_0_25_small",
+      "table": "xref_gene_ensembl",
+      "column": "speciesid",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": false
+    },
+    {
+      "id": "db:skyserver_dr16_2020_11_30",
+      "type": "database",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "path": "C:\\work_study\\github\\UofT\\CSC2125\\Text-to-Sql-hallucination\\SchemaGraph\\OmniSQL-datasets\\data\\data\\sciencebenchmark\\databases\\skyserver_dr16_2020_11_30\\skyserver_dr16_2020_11_30.sqlite"
+    },
+    {
+      "id": "table:skyserver_dr16_2020_11_30.galspecline",
+      "type": "table",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "galspecline"
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.galspecline.specobjid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "galspecline",
+      "column": "specobjid",
+      "data_type": "numeric(20,0)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "table:skyserver_dr16_2020_11_30.neighbors",
+      "type": "table",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors"
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.objid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "objid",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.neighborobjid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "neighborobjid",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.distance",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "distance",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.type",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "type",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.neighbortype",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "neighbortype",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.mode",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "mode",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.neighbors.neighbormode",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "neighbors",
+      "column": "neighbormode",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:skyserver_dr16_2020_11_30.photo_type",
+      "type": "table",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photo_type"
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photo_type.value",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photo_type",
+      "column": "value",
+      "data_type": "INTEGER",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photo_type.name",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photo_type",
+      "column": "name",
+      "data_type": "character varying",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photo_type.description",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photo_type",
+      "column": "description",
+      "data_type": "TEXT",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:skyserver_dr16_2020_11_30.photoobj",
+      "type": "table",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj"
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.objid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "objid",
+      "data_type": "bigint",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.run",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "run",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.rerun",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "rerun",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.field",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "field",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.mode",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "mode",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.type",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "type",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.clean",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "clean",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.flags",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "flags",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.rowc",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "rowc",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.colc",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "colc",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.cmodelmag_u",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "cmodelmag_u",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.cmodelmag_g",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "cmodelmag_g",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.cmodelmag_r",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "cmodelmag_r",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.ra",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "ra",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.dec",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "dec",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.b",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "b",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.l",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "l",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.extinction_r",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "extinction_r",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.mjd",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "mjd",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.loadversion",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "loadversion",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.u",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "u",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.g",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "g",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.r",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "r",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.i",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "i",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.photoobj.z",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "photoobj",
+      "column": "z",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:skyserver_dr16_2020_11_30.specobj",
+      "type": "table",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj"
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.specobjid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "specobjid",
+      "data_type": "numeric(20,0)",
+      "not_null": true,
+      "is_primary_key": true
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.bestobjid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "bestobjid",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.plateid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "plateid",
+      "data_type": "numeric(20,0)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.scienceprimary",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "scienceprimary",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.segue2primary",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "segue2primary",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.survey",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "survey",
+      "data_type": "character varying(32)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.programname",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "programname",
+      "data_type": "character varying(32)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.mjd",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "mjd",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.plate",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "plate",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.fiberid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "fiberid",
+      "data_type": "smallint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.special_target1",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "special_target1",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.segue2_target1",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "segue2_target1",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.segue2_target2",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "segue2_target2",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.ancillary_target1",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "ancillary_target1",
+      "data_type": "bigint",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.ra",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "ra",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.dec",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "dec",
+      "data_type": "double precision",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.z",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "z",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.zerr",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "zerr",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.zwarning",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "zwarning",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.class",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "class",
+      "data_type": "character varying(32)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.subclass",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "subclass",
+      "data_type": "character varying(32)",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.veldisp",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "veldisp",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.veldisperr",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "veldisperr",
+      "data_type": "REAL",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.specobj.loadversion",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "specobj",
+      "column": "loadversion",
+      "data_type": "INTEGER",
+      "not_null": false,
+      "is_primary_key": false
+    },
+    {
+      "id": "table:skyserver_dr16_2020_11_30.spplines",
+      "type": "table",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "spplines"
+    },
+    {
+      "id": "column:skyserver_dr16_2020_11_30.spplines.specobjid",
+      "type": "column",
+      "db_id": "skyserver_dr16_2020_11_30",
+      "table": "spplines",
+      "column": "specobjid",
+      "data_type": "numeric(20,0)",
+      "not_null": true,
+      "is_primary_key": true
+    }
+  ],
+  "edges": [
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.activity_types"
+    },
+    {
+      "source": "table:cordis_temporary.activity_types",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.activity_types.code"
+    },
+    {
+      "source": "table:cordis_temporary.activity_types",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.activity_types.code"
+    },
+    {
+      "source": "table:cordis_temporary.activity_types",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.activity_types.description"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.countries"
+    },
+    {
+      "source": "table:cordis_temporary.countries",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.countries.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.countries",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.countries.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.countries",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.countries.country_name"
+    },
+    {
+      "source": "table:cordis_temporary.countries",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.countries.country_code2"
+    },
+    {
+      "source": "table:cordis_temporary.countries",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.countries.country_code3"
+    },
+    {
+      "source": "table:cordis_temporary.countries",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.countries.geocode_country_code"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.ec_framework_programs"
+    },
+    {
+      "source": "table:cordis_temporary.ec_framework_programs",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.ec_framework_programs.ec_framework_program_name"
+    },
+    {
+      "source": "table:cordis_temporary.ec_framework_programs",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.ec_framework_programs.ec_framework_program_name"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.projects"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.projects.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.acronym"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.title"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.ec_call"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.ec_fund_scheme"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.cordis_ref"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.ec_ref"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.start_date"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.end_date"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.start_year"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.end_year"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.homepage"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.total_cost"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.ec_max_contribution"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.framework_program"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.objective"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.projects.principal_investigator"
+    },
+    {
+      "source": "column:cordis_temporary.projects.principal_investigator",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.people.unics_id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.people"
+    },
+    {
+      "source": "column:cordis_temporary.projects.framework_program",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.ec_framework_programs.ec_framework_program_name",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.ec_framework_programs"
+    },
+    {
+      "source": "column:cordis_temporary.projects.ec_fund_scheme",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.funding_schemes.code",
+      "fk_id": 2,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.projects",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.funding_schemes"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.erc_panels"
+    },
+    {
+      "source": "table:cordis_temporary.erc_panels",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.erc_panels.code"
+    },
+    {
+      "source": "table:cordis_temporary.erc_panels",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.erc_panels.code"
+    },
+    {
+      "source": "table:cordis_temporary.erc_panels",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.erc_panels.description"
+    },
+    {
+      "source": "table:cordis_temporary.erc_panels",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.erc_panels.part_of"
+    },
+    {
+      "source": "column:cordis_temporary.erc_panels.part_of",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.erc_research_domains.code",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.erc_panels",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.erc_research_domains"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.erc_research_domains"
+    },
+    {
+      "source": "table:cordis_temporary.erc_research_domains",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.erc_research_domains.code"
+    },
+    {
+      "source": "table:cordis_temporary.erc_research_domains",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.erc_research_domains.code"
+    },
+    {
+      "source": "table:cordis_temporary.erc_research_domains",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.erc_research_domains.description"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.eu_territorial_units"
+    },
+    {
+      "source": "table:cordis_temporary.eu_territorial_units",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.eu_territorial_units.geocode_regions"
+    },
+    {
+      "source": "table:cordis_temporary.eu_territorial_units",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.eu_territorial_units.geocode_regions"
+    },
+    {
+      "source": "table:cordis_temporary.eu_territorial_units",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.eu_territorial_units.description"
+    },
+    {
+      "source": "table:cordis_temporary.eu_territorial_units",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.eu_territorial_units.geocode_level"
+    },
+    {
+      "source": "table:cordis_temporary.eu_territorial_units",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.eu_territorial_units.nuts_version"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.funding_schemes"
+    },
+    {
+      "source": "table:cordis_temporary.funding_schemes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.funding_schemes.code"
+    },
+    {
+      "source": "table:cordis_temporary.funding_schemes",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.funding_schemes.code"
+    },
+    {
+      "source": "table:cordis_temporary.funding_schemes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.funding_schemes.title"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.institutions"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.institutions.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.country_id"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.institutions_name"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.geocode_regions_3"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.db_pedia_url"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.wikidata_url"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.grid_id"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.acronym"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.short_name"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.website"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.institutions.document_vectors"
+    },
+    {
+      "source": "column:cordis_temporary.institutions.geocode_regions_3",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.eu_territorial_units.geocode_regions",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.eu_territorial_units"
+    },
+    {
+      "source": "column:cordis_temporary.institutions.country_id",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.countries.unics_id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.institutions",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.countries"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.people"
+    },
+    {
+      "source": "table:cordis_temporary.people",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.people.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.people",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.people.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.people",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.people.full_name"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.programmes"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.programmes.code"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.programmes.code"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.programmes.rcn"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.programmes.title"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.programmes.short_name"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.programmes.parent"
+    },
+    {
+      "source": "column:cordis_temporary.programmes.parent",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.programmes.code",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.programmes",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.programmes"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.project_erc_panels"
+    },
+    {
+      "source": "table:cordis_temporary.project_erc_panels",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_erc_panels.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_erc_panels",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_erc_panels.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_erc_panels",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_erc_panels.panel"
+    },
+    {
+      "source": "column:cordis_temporary.project_erc_panels.project",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.projects.unics_id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_erc_panels",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.projects"
+    },
+    {
+      "source": "column:cordis_temporary.project_erc_panels.panel",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.erc_panels.code",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_erc_panels",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.erc_panels"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.project_member_roles"
+    },
+    {
+      "source": "table:cordis_temporary.project_member_roles",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_member_roles.code"
+    },
+    {
+      "source": "table:cordis_temporary.project_member_roles",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_member_roles.code"
+    },
+    {
+      "source": "table:cordis_temporary.project_member_roles",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_member_roles.description"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.project_members"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_members.unics_id"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.pic_number"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.rcn"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.member_name"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.activity_type"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.country"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.street"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.city"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.postal_code"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.ec_contribution"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.institution_id"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.member_role"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.geocode_regions_3"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.member_short_name"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.department_name"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.vat_number"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.latitude"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.longitude"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.region_code"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_members.region_name"
+    },
+    {
+      "source": "column:cordis_temporary.project_members.project",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.projects.unics_id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.projects"
+    },
+    {
+      "source": "column:cordis_temporary.project_members.geocode_regions_3",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.eu_territorial_units.geocode_regions",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.eu_territorial_units"
+    },
+    {
+      "source": "column:cordis_temporary.project_members.member_role",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.project_member_roles.code",
+      "fk_id": 2,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.project_member_roles"
+    },
+    {
+      "source": "column:cordis_temporary.project_members.activity_type",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.activity_types.code",
+      "fk_id": 3,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_members",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.activity_types"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.project_programmes"
+    },
+    {
+      "source": "table:cordis_temporary.project_programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_programmes.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_programmes",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_programmes.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_programmes",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_programmes.programme"
+    },
+    {
+      "source": "table:cordis_temporary.project_programmes",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_programmes.programme"
+    },
+    {
+      "source": "column:cordis_temporary.project_programmes.project",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.projects.unics_id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_programmes",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.projects"
+    },
+    {
+      "source": "column:cordis_temporary.project_programmes.programme",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.programmes.code",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_programmes",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.programmes"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.project_subject_areas"
+    },
+    {
+      "source": "table:cordis_temporary.project_subject_areas",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_subject_areas.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_subject_areas",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_subject_areas.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_subject_areas",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_subject_areas.subject_area"
+    },
+    {
+      "source": "table:cordis_temporary.project_subject_areas",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_subject_areas.subject_area"
+    },
+    {
+      "source": "column:cordis_temporary.project_subject_areas.subject_area",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.subject_areas.code",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_subject_areas",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.subject_areas"
+    },
+    {
+      "source": "column:cordis_temporary.project_subject_areas.project",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.projects.unics_id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_subject_areas",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.projects"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.project_topics"
+    },
+    {
+      "source": "table:cordis_temporary.project_topics",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_topics.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_topics",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_topics.project"
+    },
+    {
+      "source": "table:cordis_temporary.project_topics",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.project_topics.topic"
+    },
+    {
+      "source": "table:cordis_temporary.project_topics",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.project_topics.topic"
+    },
+    {
+      "source": "column:cordis_temporary.project_topics.topic",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.topics.code",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_topics",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.topics"
+    },
+    {
+      "source": "column:cordis_temporary.project_topics.project",
+      "relation": "FK_TO",
+      "target": "column:cordis_temporary.projects.unics_id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:cordis_temporary.project_topics",
+      "relation": "RELATES_TO",
+      "target": "table:cordis_temporary.projects"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.subject_areas"
+    },
+    {
+      "source": "table:cordis_temporary.subject_areas",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.subject_areas.code"
+    },
+    {
+      "source": "table:cordis_temporary.subject_areas",
+      "relation": "PRIMARY_KEY",
+      "target": "column:cordis_temporary.subject_areas.code"
+    },
+    {
+      "source": "table:cordis_temporary.subject_areas",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.subject_areas.title"
+    },
+    {
+      "source": "table:cordis_temporary.subject_areas",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.subject_areas.description"
+    },
+    {
+      "source": "db:cordis_temporary",
+      "relation": "HAS_TABLE",
+      "target": "table:cordis_temporary.topics"
+    },
+    {
+      "source": "table:cordis_temporary.topics",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.topics.code"
+    },
+    {
+      "source": "table:cordis_temporary.topics",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.topics.rcn"
+    },
+    {
+      "source": "table:cordis_temporary.topics",
+      "relation": "HAS_COLUMN",
+      "target": "column:cordis_temporary.topics.title"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.anatomical_entity"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.anatomical_entity",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.anatomical_entity",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.anatomical_entity",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.anatomical_entity",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.description"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker.gene_symbol"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker.biomarker_description"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker.biomarker_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker.test_is_a_panel"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_alias"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_alias",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_alias.biomarker_internal_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_alias",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_alias.biomarker_internal_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_alias",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_alias.alias"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_alias",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_alias.alias"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_alias.biomarker_internal_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_alias",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_article"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_article",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_article.biomarker_internal_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_article",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_article.biomarker_internal_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_article",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_article.pmid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_article",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_article.pmid"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_article.biomarker_internal_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_article",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_edrn"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.qa_state"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.biomarker_title"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.biomarker_type"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.uberon_anatomical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_edrn.phase"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_edrn.id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_edrn.uberon_anatomical_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_edrn",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.anatomical_entity"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda.test_trade_name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda.test_submission"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda.test_submission",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_submission",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_test"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda.test_trade_name",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_trade_name",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda.id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker.id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_drug"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_drug",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_fda_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_drug",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_fda_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_drug",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_drug"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_drug",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_drug"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_drug.biomarker_fda_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_drug",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.biomarker_fda_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.biomarker_fda_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.ncit_biomarker"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.ncit_biomarker"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_ncit_term.biomarker_fda_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_ncit_term",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_test"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_trade_name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_trade_name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_manufacturer"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_submission"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_submission"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.biomarker_origin"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.doid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.histological_type"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.specimen_type"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.platform_method"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_number_genes"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_adoption_evidence"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_approval_status"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_study_design"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.clinical_significance"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_test.doid",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trade_name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trade_name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_submission"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_submission"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trial_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trial_id"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_submission",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_submission",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_trial",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_test"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_test_trial.test_trade_name",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_trade_name",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_test_use"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.test_trade_name"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.test_submission"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.approved_indication"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.actual_use"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.test_submission",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_submission",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.biomarker_fda_test_use",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.biomarker_fda_test"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.biomarker_fda_test_use.test_trade_name",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.biomarker_fda_test.test_trade_name",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.cancer_tissue"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.cancer_tissue.doid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.cancer_tissue.doid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.cancer_tissue.uberon_anatomical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.cancer_tissue.uberon_anatomical_id"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.cancer_tissue.uberon_anatomical_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.anatomical_entity"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.cancer_tissue.doid",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease.id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.cancer_tissue",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.differential_expression"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.gene_symbol"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.gene_symbol"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.doid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.doid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.log2fc"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.pvalue"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.adjpvalue"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.statistical_significance"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.expression_change_direction"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.subjects_up"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.subjects_down"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.subjects_nochange"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.subjects_nocoverage"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.differential_expression.subjects_total"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.differential_expression.doid",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.differential_expression",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.disease"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease.name"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.chromosome_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.chromosome_pos"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.ref_nt"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.alt_nt"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.ensembl_transcript_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.cds_pos"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.peptide_pos"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.aa_pos_uniprotkb"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.ref_aa"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.alt_aa"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.mutation_freq"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.data_source"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.doid"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation.ensembl_transcript_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.ensembl_transcript_id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.map_protein_disease_mutation"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation.doid",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease.id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation_article"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_article",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_article.pmid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_article",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_article.pmid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_article",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_article.disease_mutation_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_article",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_article.disease_mutation_id"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation_article.disease_mutation_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_article",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.disease_mutation_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.site_prediction"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.probability"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.tool"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation_impact_prediction.disease_mutation_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_impact_prediction",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.disease_mutation_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.description"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.feature_key"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation_site_annotation.disease_mutation_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_site_annotation",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation_tissue"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_tissue.uberon_anatomical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_tissue.uberon_anatomical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_tissue.disease_mutation_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation_tissue.disease_mutation_id"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation_tissue.uberon_anatomical_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.anatomical_entity"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.disease_mutation_tissue.disease_mutation_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.disease_mutation.id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.disease_mutation_tissue",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.disease_mutation"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.healthy_expression"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.ensembl_gene_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.ensembl_gene_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.uberon_anatomical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.uberon_anatomical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.uberon_developmental_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.uberon_developmental_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.expression_level_gene_relative"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.expression_level_anatomical_relative"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.call_quality"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.expression_rank_score"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.healthy_expression.expression_score"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.healthy_expression.uberon_anatomical_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.anatomical_entity.id",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.anatomical_entity"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.healthy_expression.uberon_developmental_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.stage.id",
+      "fk_id": 1,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.stage"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.healthy_expression.ensembl_gene_id",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.xref_gene_ensembl.ensembl_gene_id",
+      "fk_id": 2,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.healthy_expression",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.xref_gene_ensembl"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.map_protein_disease_mutation"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_protein_disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.peptide_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_protein_disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.ensembl_transcript_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_protein_disease_mutation",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.ensembl_transcript_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_protein_disease_mutation",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.uniprotkb_ac"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.map_protein_disease_mutation.uniprotkb_ac",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.map_uniprot_canonical_id.uniprotkb_ac",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_protein_disease_mutation",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.map_uniprot_canonical_id"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.map_uniprot_canonical_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_uniprot_canonical_id",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.map_uniprot_canonical_id.uniprotkb_ac"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_uniprot_canonical_id",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.map_uniprot_canonical_id.uniprotkb_ac"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.map_uniprot_canonical_id",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.map_uniprot_canonical_id.uniprotkb_canonical_ac"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.species"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.species",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.species.speciesid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.species",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.species.speciesid"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.species",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.species.genus"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.species",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.species.species"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.species",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.species.speciescommonname"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.stage"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.stage",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.stage.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.stage",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.stage.id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.stage",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.stage.name"
+    },
+    {
+      "source": "db:oncomx_v1_0_25_small",
+      "relation": "HAS_TABLE",
+      "target": "table:oncomx_v1_0_25_small.xref_gene_ensembl"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.xref_gene_ensembl",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.xref_gene_ensembl.gene_symbol"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.xref_gene_ensembl",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.xref_gene_ensembl.ensembl_gene_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.xref_gene_ensembl",
+      "relation": "PRIMARY_KEY",
+      "target": "column:oncomx_v1_0_25_small.xref_gene_ensembl.ensembl_gene_id"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.xref_gene_ensembl",
+      "relation": "HAS_COLUMN",
+      "target": "column:oncomx_v1_0_25_small.xref_gene_ensembl.speciesid"
+    },
+    {
+      "source": "column:oncomx_v1_0_25_small.xref_gene_ensembl.speciesid",
+      "relation": "FK_TO",
+      "target": "column:oncomx_v1_0_25_small.species.speciesid",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:oncomx_v1_0_25_small.xref_gene_ensembl",
+      "relation": "RELATES_TO",
+      "target": "table:oncomx_v1_0_25_small.species"
+    },
+    {
+      "source": "db:skyserver_dr16_2020_11_30",
+      "relation": "HAS_TABLE",
+      "target": "table:skyserver_dr16_2020_11_30.galspecline"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.galspecline",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.galspecline.specobjid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.galspecline",
+      "relation": "PRIMARY_KEY",
+      "target": "column:skyserver_dr16_2020_11_30.galspecline.specobjid"
+    },
+    {
+      "source": "column:skyserver_dr16_2020_11_30.galspecline.specobjid",
+      "relation": "FK_TO",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.specobjid",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.galspecline",
+      "relation": "RELATES_TO",
+      "target": "table:skyserver_dr16_2020_11_30.specobj"
+    },
+    {
+      "source": "db:skyserver_dr16_2020_11_30",
+      "relation": "HAS_TABLE",
+      "target": "table:skyserver_dr16_2020_11_30.neighbors"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.objid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.neighborobjid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.distance"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.type"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.neighbortype"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.mode"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.neighbors.neighbormode"
+    },
+    {
+      "source": "column:skyserver_dr16_2020_11_30.neighbors.objid",
+      "relation": "FK_TO",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.objid",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.neighbors",
+      "relation": "RELATES_TO",
+      "target": "table:skyserver_dr16_2020_11_30.photoobj"
+    },
+    {
+      "source": "db:skyserver_dr16_2020_11_30",
+      "relation": "HAS_TABLE",
+      "target": "table:skyserver_dr16_2020_11_30.photo_type"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photo_type",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photo_type.value"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photo_type",
+      "relation": "PRIMARY_KEY",
+      "target": "column:skyserver_dr16_2020_11_30.photo_type.value"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photo_type",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photo_type.name"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photo_type",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photo_type.description"
+    },
+    {
+      "source": "db:skyserver_dr16_2020_11_30",
+      "relation": "HAS_TABLE",
+      "target": "table:skyserver_dr16_2020_11_30.photoobj"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.objid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "PRIMARY_KEY",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.objid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.run"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.rerun"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.field"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.mode"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.type"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.clean"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.flags"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.rowc"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.colc"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.cmodelmag_u"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.cmodelmag_g"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.cmodelmag_r"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.ra"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.dec"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.b"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.l"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.extinction_r"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.mjd"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.loadversion"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.u"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.g"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.r"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.i"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.z"
+    },
+    {
+      "source": "column:skyserver_dr16_2020_11_30.photoobj.type",
+      "relation": "FK_TO",
+      "target": "column:skyserver_dr16_2020_11_30.photo_type.value",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.photoobj",
+      "relation": "RELATES_TO",
+      "target": "table:skyserver_dr16_2020_11_30.photo_type"
+    },
+    {
+      "source": "db:skyserver_dr16_2020_11_30",
+      "relation": "HAS_TABLE",
+      "target": "table:skyserver_dr16_2020_11_30.specobj"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.specobjid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "PRIMARY_KEY",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.specobjid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.bestobjid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.plateid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.scienceprimary"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.segue2primary"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.survey"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.programname"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.mjd"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.plate"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.fiberid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.special_target1"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.segue2_target1"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.segue2_target2"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.ancillary_target1"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.ra"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.dec"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.z"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.zerr"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.zwarning"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.class"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.subclass"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.veldisp"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.veldisperr"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.loadversion"
+    },
+    {
+      "source": "column:skyserver_dr16_2020_11_30.specobj.bestobjid",
+      "relation": "FK_TO",
+      "target": "column:skyserver_dr16_2020_11_30.photoobj.objid",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.specobj",
+      "relation": "RELATES_TO",
+      "target": "table:skyserver_dr16_2020_11_30.photoobj"
+    },
+    {
+      "source": "db:skyserver_dr16_2020_11_30",
+      "relation": "HAS_TABLE",
+      "target": "table:skyserver_dr16_2020_11_30.spplines"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.spplines",
+      "relation": "HAS_COLUMN",
+      "target": "column:skyserver_dr16_2020_11_30.spplines.specobjid"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.spplines",
+      "relation": "PRIMARY_KEY",
+      "target": "column:skyserver_dr16_2020_11_30.spplines.specobjid"
+    },
+    {
+      "source": "column:skyserver_dr16_2020_11_30.spplines.specobjid",
+      "relation": "FK_TO",
+      "target": "column:skyserver_dr16_2020_11_30.specobj.specobjid",
+      "fk_id": 0,
+      "on_update": "NO ACTION",
+      "on_delete": "NO ACTION"
+    },
+    {
+      "source": "table:skyserver_dr16_2020_11_30.spplines",
+      "relation": "RELATES_TO",
+      "target": "table:skyserver_dr16_2020_11_30.specobj"
+    }
+  ]
+}

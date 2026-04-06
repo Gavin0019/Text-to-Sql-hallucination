@@ -1,5 +1,7 @@
 import argparse
+import heapq
 import json
+import math
 import re
 from collections import deque
 from itertools import combinations
@@ -311,6 +313,123 @@ def extract_column_path_units(used_columns: Set[str], column_graph: Dict[str, Se
     return units
 
 
+def extract_table_edges(used_tables: Set[str], table_graph: Dict[str, Set[str]]) -> Set[Tuple[str, str]]:
+    edges: Set[Tuple[str, str]] = set()
+    nodes = {f"t:{t}" for t in used_tables}
+    for n in nodes:
+        for neigh in table_graph.get(n, []):
+            if neigh in nodes:
+                a = n.split(":", 1)[1]
+                b = neigh.split(":", 1)[1]
+                edges.add(tuple(sorted((a, b))))
+    return edges
+
+
+def min_added_nodes_between(
+    graph: Dict[str, Set[str]], pred_nodes: Set[str], start: str, end: str
+) -> int | None:
+    pq: List[Tuple[int, str]] = [(0, start)]
+    best: Dict[str, int] = {start: 0}
+
+    while pq:
+        cost, node = heapq.heappop(pq)
+        if node == end:
+            return cost
+        for nxt in graph.get(node, []):
+            add = 0 if nxt in pred_nodes else 1
+            new_cost = cost + add
+            if new_cost < best.get(nxt, 999):
+                best[nxt] = new_cost
+                heapq.heappush(pq, (new_cost, nxt))
+    return None
+
+
+def average_add_repair_cost(
+    gold_tables: Set[str], pred_tables: Set[str], graph: Dict[str, Set[str]]
+) -> float:
+    gold_nodes = {f"t:{t}" for t in gold_tables}
+    pred_nodes = {f"t:{t}" for t in pred_tables}
+
+    costs: List[int] = []
+    for a, b in combinations(gold_nodes, 2):
+        c = min_added_nodes_between(graph, pred_nodes, a, b)
+        if c is not None:
+            costs.append(c)
+
+    if not costs:
+        return 0.0
+
+    return sum(costs) / len(costs)
+
+
+def map_repair_cost_to_score(cost: float) -> float:
+    return math.exp(-cost)
+
+
+def compute_hallucination_remove_cost(
+    gold_tables: Set[str],
+    pred_tables: Set[str],
+    gold_edges: Set[Tuple[str, str]],
+    pred_edges: Set[Tuple[str, str]],
+) -> Tuple[int, int]:
+    extra_tables = pred_tables - gold_tables
+    n_tab = len(extra_tables)
+    extra_edges = pred_edges - gold_edges
+    n_edge = len(extra_edges)
+    return n_tab, n_edge
+
+
+def _edge_precision(pred: Set[Tuple[str, str]], gold: Set[Tuple[str, str]]) -> float:
+    if not pred and not gold:
+        return 1.0
+    return safe_div(len(pred & gold), len(pred))
+
+
+def _edge_recall(pred: Set[Tuple[str, str]], gold: Set[Tuple[str, str]]) -> float:
+    if not pred and not gold:
+        return 1.0
+    return safe_div(len(pred & gold), len(gold))
+
+
+def _edge_f1(pred: Set[Tuple[str, str]], gold: Set[Tuple[str, str]]) -> float:
+    if not pred and not gold:
+        return 1.0
+    p, r = _edge_precision(pred, gold), _edge_recall(pred, gold)
+    return safe_div(2 * p * r, p + r) if (p + r) > 0 else 0.0
+
+
+def compute_subgraph_metrics(
+    gold_used: Dict[str, Set[str]],
+    pred_used: Dict[str, Set[str]],
+    table_graph: Dict[str, Set[str]],
+) -> Dict[str, float]:
+    gold_tables = gold_used["tables"]
+    pred_tables = pred_used["tables"]
+    gold_edges = extract_table_edges(gold_tables, table_graph)
+    pred_edges = extract_table_edges(pred_tables, table_graph)
+    add_raw = average_add_repair_cost(gold_tables, pred_tables, table_graph)
+    n_extra_tab, n_extra_edge = compute_hallucination_remove_cost(
+        gold_tables, pred_tables, gold_edges, pred_edges
+    )
+    remove_raw = float(n_extra_tab + n_extra_edge)
+    total_cost = add_raw + remove_raw
+    return {
+        "subgraph_edge_f1": _edge_f1(pred_edges, gold_edges),
+        "subgraph_edge_precision": _edge_precision(pred_edges, gold_edges),
+        "subgraph_edge_recall": _edge_recall(pred_edges, gold_edges),
+        "subgraph_exact_match": float(
+            pred_tables == gold_tables and pred_edges == gold_edges
+        ),
+        "subgraph_repair_add_raw": add_raw,
+        "subgraph_repair_remove_raw": remove_raw,
+        "subgraph_repair_add_score": map_repair_cost_to_score(add_raw),
+        "subgraph_repair_remove_score": map_repair_cost_to_score(remove_raw),
+        "subgraph_repair_extra_tables": float(n_extra_tab),
+        "subgraph_repair_extra_edges": float(n_extra_edge),
+        "subgraph_repair_score": map_repair_cost_to_score(total_cost),
+    }
+
+
 def compute_metrics(
     gold_used: Dict[str, Set[str]],
     pred_used: Dict[str, Set[str]],
@@ -364,12 +483,13 @@ def compute_metrics(
 
 
 def evaluate_file(
-    path: str,
+    path: str | Path,
     db_to_tables: Dict[str, Set[str]],
     table_graph_by_db: Dict[str, Dict[str, Set[str]]],
     column_graph_by_db: Dict[str, Dict[str, Set[str]]],
 ):
-    with open(path, "r", encoding="utf-8") as f:
+    path = Path(path)
+    with path.open("r", encoding="utf-8") as f:
         data = json.load(f)
 
     results = []
@@ -392,7 +512,7 @@ def evaluate_file(
         table_graph = table_graph_by_db.get(db_id, {})
         column_graph = column_graph_by_db.get(db_id, {})
 
-        gold_sql = row["output_seq"].strip()
+        gold_sql = row["output_seq"].strip() if row.get("output_seq") else ""
         pred_sql = row["pred_sqls"][0].strip() if row.get("pred_sqls") else ""
 
         gold_used = extract_used_schema(gold_sql, schema, stats=parser_stats)
@@ -411,6 +531,7 @@ def evaluate_file(
             gold_column_paths,
             pred_column_paths,
         )
+        subgraph_metrics = compute_subgraph_metrics(gold_used, pred_used, table_graph)
 
         results.append(
             {
@@ -427,6 +548,7 @@ def evaluate_file(
                 "gold_kg_column_paths": sorted(gold_column_paths),
                 "pred_kg_column_paths": sorted(pred_column_paths),
                 **metrics,
+                **subgraph_metrics,
             }
         )
 
@@ -440,7 +562,9 @@ def evaluate_file(
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Evaluate Text-to-SQL outputs with global-KG path metrics.")
+    parser = argparse.ArgumentParser(
+        description="Evaluate Text-to-SQL outputs with global-KG path and subgraph repair metrics."
+    )
     parser.add_argument("--input-glob", default="*_dev_spider_syn.json", help="Input file glob pattern")
     parser.add_argument("--output", default="all_models_evaluation_summary_kg_path.json", help="Output summary JSON file")
     parser.add_argument("--kg-file", default="spider_dev_only_schema_kg.json", help="Global KG JSON file")
